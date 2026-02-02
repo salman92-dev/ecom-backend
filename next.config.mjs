@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  matcher: ["/products/:path*", "/login"],
    async redirects() {
     return [
       {

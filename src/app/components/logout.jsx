@@ -10,7 +10,7 @@ export default function LogoutButtonDropdown() {
   const logout = async () => {
     setLoading(true);
     try {
-      await fetch("http://localhost:3000/api/logout", {
+      await fetch("/api/logout", {
         method: "POST",
         credentials: "include",
       });
@@ -88,4 +88,5 @@ export default function LogoutButtonDropdown() {
       )}
     </div>
   );
+
 }

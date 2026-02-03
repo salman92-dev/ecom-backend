@@ -7,7 +7,6 @@ export async function GET() {
     const cookieStore = await cookies(); // ✅ sync
     const token = cookieStore.get("token")?.value;
     const tokenverification = verifyToken(token);
-    console.log("Token verification result:", tokenverification);
 
     if (!tokenverification) {
       return Response.json({ loggedIn: false });

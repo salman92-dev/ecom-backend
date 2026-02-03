@@ -5,7 +5,6 @@ import { verifyToken } from "../lib/jwt";
 import LogoutButtonDropdown from "../components/logout";
 import { getAllProducts } from "../lib/products";
 
-// If you want server-side fetch via API route, we can also use fetch("/api/products")
 export default async function ProductsPage() {
   const cookieStore = await cookies();
   const tokenCookie = cookieStore.get("token")?.value;

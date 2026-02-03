@@ -2,7 +2,6 @@ import { cookies } from "next/headers";
 
 export async function POST() {
   const cookieStore = await cookies();
-  console.log(cookieStore);
 
   // Delete the token cookie
   cookieStore.set("token", "", {

@@ -2,7 +2,7 @@ import pkg from "pg";
 const { Pool } = pkg;
 
 const pool = new Pool({
-  connectionString: process.env.NEXT_PUBLIC_DATABASE_URL,
+  connectionString: process.env.Next_PUBLIC_DATABASE_URL,
   ssl: { rejectUnauthorized: false },
   max: 5,              // keep low for serverless
   idleTimeoutMillis: 30000,

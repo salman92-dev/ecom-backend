@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { verifyToken } from "../lib/jwt";
 import LogoutButtonDropdown from "../components/logout";
+import { getAllProducts } from "../lib/products";
 
 // If you want server-side fetch via API route, we can also use fetch("/api/products")
 export default async function ProductsPage() {
@@ -18,10 +19,8 @@ export default async function ProductsPage() {
   let products = [];
 
   try {
-    const res = await fetch(`http://localhost:3000/api/products`, {
-      cache: "no-store", // disable caching to always get fresh data
-    });
-    products = await res.json();
+    const getproducts = await getAllProducts();
+    products = getproducts;
   } catch (error) {
     console.error("Failed to fetch products:", error);
   }

@@ -1,4 +1,3 @@
-import pool from "../lib/db";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
